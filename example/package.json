@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "next": "beta",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "scripts": {
+    "dev": "cp ../dist/react-runkit-embed.js ./pages && next",
+    "build": "cp ../dist/react-runkit-embed.js ./pages && next build",
+    "start": "cp ../dist/react-runkit-embed.js ./pages && next start"
+  }
+}
