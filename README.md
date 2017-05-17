@@ -5,7 +5,7 @@ RunKit Embed Component.
 ## Install
 
 ```sh
-$ yarn add react-runkit
+$ npm i -S react-runkit
 ```
 
 ## Usage

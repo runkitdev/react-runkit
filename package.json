@@ -13,7 +13,7 @@
     "react": "^15.5.4"
   },
   "scripts": {
-    "build": "yarn build-dev && yarn build-prod",
+    "build": "npm run build-dev && npm run build-prod",
     "build-prod": "webpack -p --config webpack.js --output-filename react-runkit.min.js",
     "build-dev": "webpack --config webpack.js --output-filename react-runkit.js"
   },
