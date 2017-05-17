@@ -17,11 +17,12 @@
     "build-prod": "webpack -p --config webpack.js --output-filename react-runkit.min.js",
     "build-dev": "webpack --config webpack.js --output-filename react-runkit.js"
   },
-  "main": "index.js",
+  "main": "./dist/react-runkit.js",
   "name": "react-runkit",
   "version": "0.3.0",
   "description": "RunKit Embed Component.",
   "repository": "https://github.com/runkitdev/react-runkit",
   "author": "synchronous",
-  "license": "MIT"
+  "license": "MIT",
+  "runkitExampleFilename": "runkit-example.js"
 }
