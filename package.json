@@ -5,6 +5,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "webpack": "^2.5.1"
   },
@@ -12,14 +13,14 @@
     "react": "^15.5.4"
   },
   "scripts": {
-    "build": "webpack -p --config webpack.js",
-    "build-dev": "webpack --config webpack.js"
+    "build": "yarn build-dev && yarn build-prod",
+    "build-prod": "webpack -p --config webpack.js --output-filename react-runkit.min.js",
+    "build-dev": "webpack --config webpack.js --output-filename react-runkit.js"
   },
-  "main": "./dist/react-runkit.js",
+  "main": "index.js",
   "name": "react-runkit",
   "version": "0.1.0",
   "description": "RunKit Embed Component.",
-  "main": "index.js",
   "repository": "https://github.com/edge/react-runkit",
   "author": "synchronous",
   "license": "MIT"

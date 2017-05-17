@@ -1,6 +1,7 @@
 const React = require('react')
+const PropTypes = require('prop-types')
 
-module.exports = class Embed extends React.Component {
+class Embed extends React.Component {
 	shouldComponentUpdate() {
 		return false
 	}
@@ -32,3 +33,19 @@ module.exports = class Embed extends React.Component {
 	}
 }
 
+Embed.propTypes = {
+	source: PropTypes.string,
+	readOnly: PropTypes.bool,
+	mode: PropTypes.string,
+	nodeVersion: PropTypes.string,
+	env: PropTypes.array,
+	title: PropTypes.string,
+	minHeight: PropTypes.string,
+	packageResolutionTimestamp: PropTypes.string,
+	preamble: PropTypes.string,
+	onLoad: PropTypes.func,
+	onURLChanged: PropTypes.func,
+	onEvaluate: PropTypes.func
+}
+
+module.exports = Embed
