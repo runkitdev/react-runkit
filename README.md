@@ -45,6 +45,14 @@ If `true`, the user will not be able to edit or run the embed.
 <Embed source={ `console.log('Hello, world!')` } readOnly={ true } />
 ```
 
+### mode : string
+
+If `'endpoint'`, the notebook will be run as an endpoint and a link to the served page will be shown.
+
+```js
+<Embed source={ `exports.endpoint = (req, res) => res.end('Hello, world!')` } mode='endpoint' />
+```
+
 ### nodeVersion : string
 
 Request a version or semver range for the node engine.
