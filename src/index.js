@@ -21,7 +21,7 @@ module.exports = class Embed extends React.Component {
 		const element = this.refs.notebook
 		element.innerHTML = ''
 
-		const options = { element, ...this.props }
+		const options = { ...this.props, element }
 
 		this.notebook = RunKit.createNotebook(options)
 	}
