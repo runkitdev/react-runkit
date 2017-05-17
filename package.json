@@ -19,7 +19,7 @@
   },
   "main": "./dist/react-runkit.js",
   "name": "react-runkit",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "RunKit Embed Component.",
   "repository": "https://github.com/runkitdev/react-runkit",
   "author": "synchronous",
