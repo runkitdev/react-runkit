@@ -25,6 +25,8 @@ module.exports = class HelloEmbed extends React.Component {
 }
 ```
 
+Don't forget to check out the [RunKit embed docs](https://runkit.com/docs/embed#options).
+
 ## Props
 
 ### source : string
@@ -142,4 +144,3 @@ class App extends React.Component {
 }
 ```
 
-See more in the [RunKit docs](https://runkit.com/docs/embed#options).
