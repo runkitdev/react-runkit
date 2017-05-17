@@ -1,2 +1,2 @@
-# react-runkit-embed
+# react-runkit
 RunKit Embed Component.

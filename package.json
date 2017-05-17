@@ -15,12 +15,12 @@
     "build": "webpack -p --config webpack.js",
     "build-dev": "webpack --config webpack.js"
   },
-  "main": "./dist/react-runkit-embed.js",
-  "name": "react-runkit-embed",
+  "main": "./dist/react-runkit.js",
+  "name": "react-runkit",
   "version": "0.1.0",
   "description": "RunKit Embed Component.",
   "main": "index.js",
-  "repository": "https://github.com/edge/react-runkit-embed",
+  "repository": "https://github.com/edge/react-runkit",
   "author": "synchronous",
   "license": "MIT"
 }

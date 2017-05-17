@@ -1,4 +1,4 @@
 *.log
 node_modules
 .next
-example/pages/react-runkit-embed.js
+example/pages/react-runkit.js
