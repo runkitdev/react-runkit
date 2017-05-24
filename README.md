@@ -47,7 +47,7 @@ If `true`, the user will not be able to edit or run the embed.
 
 ### mode : string
 
-If `'endpoint'`, the notebook will be run as an endpoint and a link to the served page will be shown.
+If `'endpoint'`, the notebook will be run as an [endpoint](https://runkit.com/docs/endpoint) and a link to the served page will be shown.
 
 ```js
 <Embed source={ `exports.endpoint = (req, res) => res.end('Hello, world!')` } mode='endpoint' />
