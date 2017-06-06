@@ -66,7 +66,7 @@ Request a version or semver range for the node engine.
 Provide a list of environment variables accessible in the notebook through `process.env`.
 
 ```js
-<Embed source={ `connect(process.env.USERNAME, process.env.PASSWORD)` } env={ ['USERNAME=dev', 'PASSWORD=dev'] } />
+<Embed source={ 'console.log(`Hello, ${ process.env.FIRSTNAME } ${ process.env.LASTNAME }!`' } env={ ['FIRSTNAME=Haskell', 'LASTNAME=Curry'] } />
 ```
 
 ### title : string
@@ -85,12 +85,12 @@ Provide a minimum height for the embed (`'130px'` by default).
 <Embed source={ `console.log('Hello, world!')` } minHeight='200px' />
 ```
 
-### packageResolutionTimestamp : number
+### packageTimestamp : number
 
 Specify the Unix time in milliseconds at which packages should resolved. Packages published after the date will be ignored.
 
 ```js
-<Embed source={ `console.log('Hello, world!')` } packageResolutionTimestamp={ (new Date('2017-03-22')).getTime() } />
+<Embed source={ `require('babel-core')` } packageTimestamp={ 1468195200000 } />
 ```
 
 ### preamble : string
