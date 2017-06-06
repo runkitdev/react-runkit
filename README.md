@@ -25,6 +25,8 @@ module.exports = class HelloEmbed extends React.Component {
 }
 ```
 
+![](http://i.imgur.com/7mH8e6o.png)
+
 Don't forget to check out the [RunKit embed docs](https://runkit.com/docs/embed#options).
 
 ## Props
