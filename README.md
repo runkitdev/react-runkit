@@ -4,8 +4,20 @@ RunKit Embed Component.
 
 ## Install
 
+Install the package:
+
 ```sh
 $ npm i -S react-runkit
+```
+
+Add the RunKit embed library to your page:
+
+```html
+<head>
+    ...
+    <script src='https://embed.runkit.com'></script>
+    ...
+</head>
 ```
 
 ## Usage
@@ -14,14 +26,12 @@ $ npm i -S react-runkit
 const React = require('react')
 const Embed = require('react-runkit')
 
-const helloSource = `
-console.log('Hello, world!')
-`
+const helloSource = `console.log('Hello, world!')`
 
 module.exports = class HelloEmbed extends React.Component {
-	render() {
-		return <Embed source={ helloSource } />
-	}
+    render() {
+        return <Embed source={ helloSource } />
+    }
 }
 ```
 
@@ -143,14 +153,14 @@ Retrieve the URL of the notebook.
 
 ```js
 class App extends React.Component {
-	run() {
-		this.refs.embed.evaluate()
-	}
-	render() {
-		return (
-			<Embed source={ `console.log('Hello, world!')` } ref='embed' onLoad={ this.run.bind(this) } />
-		)
-	}
+    run() {
+        this.refs.embed.evaluate()
+    }
+    render() {
+        return (
+            <Embed source={ `console.log('Hello, world!')` } ref='embed' onLoad={ this.run.bind(this) } />
+        )
+    }
 }
 ```
 
