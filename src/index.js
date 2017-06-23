@@ -6,29 +6,31 @@ class Embed extends React.Component {
 		return false
 	}
 	componentWillReceiveProps(nextProps) {
-		if (this.notebook) {
+		if (this.embed) {
 			const { props } = this
-			if (props.source !== nextProps.source) this.notebook.setSource(nextProps.source)
-			if (props.preamble !== nextProps.preamble) this.notebook.setPreamble(nextProps.preamble)
+			if (props.source !== nextProps.source) this.embed.setSource(nextProps.source)
+			if (props.preamble !== nextProps.preamble) this.embed.setPreamble(nextProps.preamble)
 		}
 	}
 	evaluate(callback) {
-		this.notebook.evaluate(callback)
+		this.embed.evaluate(callback)
 	}
 	getURL() {
-		return this.notebook.URL
+		return this.embed.URL
 	}
 	componentDidMount() {
-		const element = this.refs.notebook
-		element.innerHTML = ''
-
+		const element = this.refs.embed
 		const options = { ...this.props, element }
 
-		this.notebook = RunKit.createNotebook(options)
+		this.embed = RunKit.createNotebook(options)
+	}
+	componentWillUnmount() {
+		this.embed.destroy()
+		this.embed = null
 	}
 	render() {
 		return (
-			<div ref='notebook' />
+			<div ref='embed' />
 		)
 	}
 }
@@ -41,7 +43,7 @@ Embed.propTypes = {
 	env: PropTypes.array,
 	title: PropTypes.string,
 	minHeight: PropTypes.string,
-	packageResolutionTimestamp: PropTypes.string,
+	packageTimestamp: PropTypes.string,
 	preamble: PropTypes.string,
 	onLoad: PropTypes.func,
 	onURLChanged: PropTypes.func,

@@ -537,37 +537,41 @@ var Embed = function (_React$Component) {
 	}, {
 		key: 'componentWillReceiveProps',
 		value: function componentWillReceiveProps(nextProps) {
-			if (this.notebook) {
+			if (this.embed) {
 				var props = this.props;
 
-				if (props.source !== nextProps.source) this.notebook.setSource(nextProps.source);
-				if (props.preamble !== nextProps.preamble) this.notebook.setPreamble(nextProps.preamble);
+				if (props.source !== nextProps.source) this.embed.setSource(nextProps.source);
+				if (props.preamble !== nextProps.preamble) this.embed.setPreamble(nextProps.preamble);
 			}
 		}
 	}, {
 		key: 'evaluate',
 		value: function evaluate(callback) {
-			this.notebook.evaluate(callback);
+			this.embed.evaluate(callback);
 		}
 	}, {
 		key: 'getURL',
 		value: function getURL() {
-			return this.notebook.URL;
+			return this.embed.URL;
 		}
 	}, {
 		key: 'componentDidMount',
 		value: function componentDidMount() {
-			var element = this.refs.notebook;
-			element.innerHTML = '';
-
+			var element = this.refs.embed;
 			var options = _extends({}, this.props, { element: element });
 
-			this.notebook = RunKit.createNotebook(options);
+			this.embed = RunKit.createNotebook(options);
+		}
+	}, {
+		key: 'componentWillUnmount',
+		value: function componentWillUnmount() {
+			this.embed.destroy();
+			this.embed = null;
 		}
 	}, {
 		key: 'render',
 		value: function render() {
-			return React.createElement('div', { ref: 'notebook' });
+			return React.createElement('div', { ref: 'embed' });
 		}
 	}]);
 
@@ -582,7 +586,7 @@ Embed.propTypes = {
 	env: PropTypes.array,
 	title: PropTypes.string,
 	minHeight: PropTypes.string,
-	packageResolutionTimestamp: PropTypes.string,
+	packageTimestamp: PropTypes.string,
 	preamble: PropTypes.string,
 	onLoad: PropTypes.func,
 	onURLChanged: PropTypes.func,
