@@ -15,6 +15,9 @@ class Embed extends React.Component {
 	evaluate(callback) {
 		this.embed.evaluate(callback)
 	}
+	getSource(callback) {
+		this.embed.getSource(callback)
+	}
 	getURL() {
 		return this.embed.URL
 	}

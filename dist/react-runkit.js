@@ -550,6 +550,11 @@ var Embed = function (_React$Component) {
 			this.embed.evaluate(callback);
 		}
 	}, {
+		key: 'getSource',
+		value: function getSource(callback) {
+			this.embed.getSource(callback);
+		}
+	}, {
 		key: 'getURL',
 		value: function getURL() {
 			return this.embed.URL;
