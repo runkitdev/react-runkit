@@ -154,11 +154,11 @@ Retrieve the URL of the notebook.
 ```js
 class App extends React.Component {
     run() {
-        this.refs.embed.evaluate()
+        this.embed.evaluate()
     }
     render() {
         return (
-            <Embed source={ `console.log('Hello, world!')` } ref='embed' onLoad={ this.run.bind(this) } />
+            <Embed source={ `console.log('Hello, world!')` } ref={e => { this.embed = e } } onLoad={ this.run.bind(this) } />
         )
     }
 }
