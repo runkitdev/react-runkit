@@ -118,7 +118,7 @@ Specify source code that is run before the main source. This code will not be sh
 Inspired by [this comment](https://discuss.runkit.com/t/theme-runkit-embed/541/6), pass a `styles` object to override default Runkit styling.
 
 ```js
-<Embed styles={
+<Embed styles={ 
   {
     "controlsBackground": "#070707",
     "controlsBorderColor": "#424242",
