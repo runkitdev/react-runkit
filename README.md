@@ -113,6 +113,29 @@ Specify source code that is run before the main source. This code will not be sh
 <Embed source={ `console.log(_.map(_.add(1), [1, 2, 3]))` } preamble={ `const _ = require('lodash/fp')` } />
 ```
 
+### styles : object
+
+Inspired by [this comment](https://discuss.runkit.com/t/theme-runkit-embed/541/6), pass a `styles` object to override default Runkit styling.
+
+```js
+<Embed styles={
+  {
+    "controlsBackground": "#070707",
+    "controlsBorderColor": "#424242",
+    "controlsColor": "#444",
+    "editedColor": "#01579b",
+    "hoverColor": "#1e88e5",
+    "logoColor": "#777",
+    "runButtonBackground": "#1B5E20",
+    "runButtonBorderColor": "#2e7d32",
+    "runButtonColor": "#81C784",
+    "runButtonHoverBackground": "#1B5E20",
+    "runButtonHoverBorderColor": "#2e7d32",
+    "runButtonHoverColor": "#81C784"
+  }
+}  />
+```
+
 ### onLoad : function
 
 Provide a callback that is run when the embed is loaded.
@@ -163,4 +186,3 @@ class App extends React.Component {
     }
 }
 ```
-
