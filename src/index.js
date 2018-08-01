@@ -48,7 +48,8 @@ Embed.propTypes = {
 	minHeight: PropTypes.string,
 	packageTimestamp: PropTypes.string,
 	preamble: PropTypes.string,
-	syntaxTheme: PropTypes.string,
+	theme: PropTypes.string,
+	gutterStyle: PropTypes.string,
 	onLoad: PropTypes.func,
 	onURLChanged: PropTypes.func,
 	onEvaluate: PropTypes.func
