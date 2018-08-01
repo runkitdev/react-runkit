@@ -113,12 +113,20 @@ Specify source code that is run before the main source. This code will not be sh
 <Embed source={ `console.log(_.map(_.add(1), [1, 2, 3]))` } preamble={ `const _ = require('lodash/fp')` } />
 ```
 
-### syntaxTheme : string
+### theme : string
 
-Create your own theme [here](https://runkit.com/docs/theme-maker). Then, reference the syntax name using `syntaxTheme`.
+Create your own theme [here](https://runkit.com/docs/theme-maker). Then, reference the syntax name using `theme`.
 
 ```js
-<Embed syntaxTheme={ 'my-cool-theme' } />
+<Embed theme={ 'my-cool-theme' } />
+```
+
+### gutterStyle : string
+
+Control whether the line number gutter is rendered inside or outside the code pane. Defaults to `'outside'`;
+
+```js
+<Embed gutterStyle={ 'inside' } />
 ```
 
 ### onLoad : function
