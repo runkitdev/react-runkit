@@ -1,6 +1,5 @@
 const React = require('react')
 const PropTypes = require('prop-types')
-import urlencode from './urlencode'
 
 class Embed extends React.Component {
 	shouldComponentUpdate() {
@@ -25,10 +24,6 @@ class Embed extends React.Component {
 	componentDidMount() {
 		const element = this.refs.embed
 		const options = { ...this.props, element }
-		if('styles' in options) {
-			let encodedStyles = urlencode(options['styles']);
-			options['styles'] = encodedStyles;
-		}
 
 		this.embed = RunKit.createNotebook(options)
 	}
@@ -53,7 +48,7 @@ Embed.propTypes = {
 	minHeight: PropTypes.string,
 	packageTimestamp: PropTypes.string,
 	preamble: PropTypes.string,
-	styles: PropTypes.object,
+	syntaxTheme: PropTypes.string,
 	onLoad: PropTypes.func,
 	onURLChanged: PropTypes.func,
 	onEvaluate: PropTypes.func
