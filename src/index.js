@@ -1,6 +1,6 @@
 const React = require('react')
 const PropTypes = require('prop-types')
-const urlencode = require('./urlencode')
+import urlencode from './urlencode'
 
 class Embed extends React.Component {
 	shouldComponentUpdate() {

@@ -465,11 +465,13 @@ module.exports = warning;
 
 
 Object.defineProperty(exports, "__esModule", {
-                               value: true
+                              value: true
 });
 
 exports.default = function (text) {
-                               return encodeURIComponent(text).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/%20/g, '+');
+                              var str = text.toString();
+
+                              return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/%20/g, '+');
 };
 
 /***/ }),
@@ -526,6 +528,12 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _urlencode = __webpack_require__(5);
+
+var _urlencode2 = _interopRequireDefault(_urlencode);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -534,7 +542,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = __webpack_require__(7);
 var PropTypes = __webpack_require__(6);
-var urlencode = __webpack_require__(5);
 
 var Embed = function (_React$Component) {
 	_inherits(Embed, _React$Component);
@@ -581,7 +588,7 @@ var Embed = function (_React$Component) {
 			var element = this.refs.embed;
 			var options = _extends({}, this.props, { element: element });
 			if ('styles' in options) {
-				var encodedStyles = urlencode(options['styles']);
+				var encodedStyles = (0, _urlencode2.default)(options['styles']);
 				options['styles'] = encodedStyles;
 			}
 
