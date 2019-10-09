@@ -126,7 +126,7 @@ Provide a callback that is run when the embed is loaded.
 Provide a callback that is run whenever the embed's URL changes.
 
 ```js
-<Embed source={ `console.log('Hello, world!')` } onLoad={ this.alertURLChanged.bind(this) } />
+<Embed source={ `console.log('Hello, world!')` } onURLChanged={ this.alertURLChanged.bind(this) } />
 ```
 
 ### onEvaluate : function
@@ -134,7 +134,7 @@ Provide a callback that is run whenever the embed's URL changes.
 Provide a callback that is run whenever the embed is evaluated.
 
 ```js
-<Embed source={ `console.log('Hello, world!')` } onLoad={ this.alertEvaluated.bind(this) } />
+<Embed source={ `console.log('Hello, world!')` } onEvaluate={ this.alertEvaluated.bind(this) } />
 ```
 
 ## Methods
