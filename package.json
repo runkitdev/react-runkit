@@ -19,10 +19,10 @@
   },
   "main": "./dist/react-runkit.js",
   "name": "react-runkit",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "RunKit Embed Component.",
   "repository": "https://github.com/runkitdev/react-runkit",
-  "author": "synchronous",
+  "author": "",
   "license": "MIT",
   "runkitExampleFilename": "runkit-example.js"
 }
