@@ -113,6 +113,22 @@ Specify source code that is run before the main source. This code will not be sh
 <Embed source={ `console.log(_.map(_.add(1), [1, 2, 3]))` } preamble={ `const _ = require('lodash/fp')` } />
 ```
 
+### theme : string
+
+Create your own theme [here](https://runkit.com/docs/theme-maker). Then, reference the syntax name using `theme`.
+
+```js
+<Embed theme={ 'my-cool-theme' } />
+```
+
+### gutterStyle : string
+
+Control whether the line number gutter is rendered inside or outside the code pane. Defaults to `'outside'`;
+
+```js
+<Embed gutterStyle={ 'inside' } />
+```
+
 ### onLoad : function
 
 Provide a callback that is run when the embed is loaded.
@@ -163,4 +179,3 @@ class App extends React.Component {
     }
 }
 ```
-
