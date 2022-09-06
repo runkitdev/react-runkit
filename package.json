@@ -10,7 +10,7 @@
     "webpack": "^2.5.1"
   },
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "build": "npm run build-dev && npm run build-prod",
